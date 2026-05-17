@@ -6,9 +6,15 @@ GitHub: https://github.com/george-killua/receipt-scanner-compose
 
 ## Screenshots
 
-| Camera capture | Review extraction | Saved receipts |
-| --- | --- | --- |
-| ![Camera capture](docs/screenshots/01-camera-capture.png) | ![Review extraction](docs/screenshots/02-review-extraction.png) | ![Saved receipts](docs/screenshots/03-saved-receipts.png) |
+Real screenshots captured from the debug APK running on an Android emulator.
+
+| Saved receipts | Receipt detail |
+| --- | --- |
+| ![Saved receipts](docs/screenshots/real-03-saved-receipts.png) | ![Receipt detail](docs/screenshots/real-04-receipt-detail.png) |
+
+| Home state | Camera capture |
+| --- | --- |
+| ![Home state](docs/screenshots/real-01-home.png) | ![Camera capture](docs/screenshots/real-02-camera.png) |
 
 ## What It Demonstrates
 
