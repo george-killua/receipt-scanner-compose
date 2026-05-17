@@ -4,6 +4,12 @@ Native Android receipt scanning demo built with Kotlin, Jetpack Compose, CameraX
 
 GitHub: https://github.com/george-killua/receipt-scanner-compose
 
+## Screenshots
+
+| Camera capture | Review extraction | Saved receipts |
+| --- | --- | --- |
+| ![Camera capture](docs/screenshots/01-camera-capture.png) | ![Review extraction](docs/screenshots/02-review-extraction.png) | ![Saved receipts](docs/screenshots/03-saved-receipts.png) |
+
 ## What It Demonstrates
 
 - CameraX receipt capture flow

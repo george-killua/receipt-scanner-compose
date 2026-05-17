@@ -1,0 +1,27 @@
+<svg width="1080" height="1920" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1080" height="1920" rx="72" fill="#07111F"/>
+  <text x="90" y="140" fill="#F8FAFC" font-family="Inter, Arial" font-size="54" font-weight="800">Review Extraction</text>
+  <text x="90" y="198" fill="#9FB0C7" font-family="Inter, Arial" font-size="30">OCR fields stay editable before saving</text>
+  <rect x="70" y="280" width="940" height="1340" rx="44" fill="#0D1B2E" stroke="#263B5C" stroke-width="4"/>
+  <text x="130" y="380" fill="#D6B35A" font-family="Inter, Arial" font-size="38" font-weight="800">Extracted receipt</text>
+  <g font-family="Inter, Arial">
+    <text x="130" y="500" fill="#AAB8CF" font-size="26" font-weight="700">Merchant</text>
+    <rect x="130" y="525" width="820" height="96" rx="22" fill="#111D2E" stroke="#2B4265" stroke-width="3"/>
+    <text x="168" y="586" fill="#F8FAFC" font-size="31" font-weight="700">Demo Market Linz</text>
+    <text x="130" y="705" fill="#AAB8CF" font-size="26" font-weight="700">Amount</text>
+    <rect x="130" y="730" width="820" height="96" rx="22" fill="#111D2E" stroke="#2B4265" stroke-width="3"/>
+    <text x="168" y="791" fill="#F8FAFC" font-size="31" font-weight="700">€42.80</text>
+    <text x="130" y="910" fill="#AAB8CF" font-size="26" font-weight="700">Date</text>
+    <rect x="130" y="935" width="820" height="96" rx="22" fill="#111D2E" stroke="#2B4265" stroke-width="3"/>
+    <text x="168" y="996" fill="#F8FAFC" font-size="31" font-weight="700">17.05.2026</text>
+    <text x="130" y="1120" fill="#AAB8CF" font-size="26" font-weight="700">OCR text preview</text>
+    <rect x="130" y="1150" width="820" height="270" rx="22" fill="#081424" stroke="#2B4265" stroke-width="3"/>
+    <text x="168" y="1215" fill="#CBD5E1" font-size="26">Demo Market Linz</text>
+    <text x="168" y="1270" fill="#CBD5E1" font-size="26">Total 42,80 EUR</text>
+    <text x="168" y="1325" fill="#CBD5E1" font-size="26">Date 17.05.2026</text>
+    <rect x="130" y="1490" width="390" height="86" rx="43" fill="#14263D" stroke="#2E496C" stroke-width="3"/>
+    <text x="325" y="1545" fill="#E5E7EB" font-size="30" font-weight="700" text-anchor="middle">Cancel</text>
+    <rect x="560" y="1490" width="390" height="86" rx="43" fill="#D6B35A"/>
+    <text x="755" y="1545" fill="#07111F" font-size="30" font-weight="900" text-anchor="middle">Save to Room</text>
+  </g>
+</svg>
