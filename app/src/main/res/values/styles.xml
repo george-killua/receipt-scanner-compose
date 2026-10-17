@@ -1,7 +1,7 @@
 <resources>
-    <style name="Theme.ReceiptScanner" parent="android:style/Theme.Material.Light.NoActionBar">
+    <style name="Theme.SplitSnap" parent="android:style/Theme.Material.Light.NoActionBar">
         <item name="android:windowLightStatusBar">true</item>
-        <item name="android:statusBarColor">#F8FAFC</item>
-        <item name="android:navigationBarColor">#F8FAFC</item>
+        <item name="android:statusBarColor">#FFFBF7</item>
+        <item name="android:navigationBarColor">#FFFBF7</item>
     </style>
 </resources>

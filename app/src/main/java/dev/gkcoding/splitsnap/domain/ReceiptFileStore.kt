@@ -1,4 +1,4 @@
-package dev.gkcoding.receiptscanner.domain
+package dev.gkcoding.splitsnap.domain
 
 import android.content.Context
 import android.net.Uri
@@ -31,6 +31,13 @@ class ReceiptFileStore(private val context: Context) {
         } ?: error("Unable to open selected file")
 
         StoredReceiptFile(destination, mimeType)
+    }
+
+    /** Deletes a stored original, ignoring paths outside the receipts folder. */
+    suspend fun delete(path: String) = withContext(Dispatchers.IO) {
+        if (path.isBlank()) return@withContext
+        val file = File(path)
+        if (file.parentFile?.canonicalPath == receiptDir.canonicalPath) file.delete()
     }
 
     private fun extensionFor(uri: Uri, mimeType: String): String {

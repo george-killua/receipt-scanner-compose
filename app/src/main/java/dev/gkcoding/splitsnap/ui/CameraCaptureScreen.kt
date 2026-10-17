@@ -1,4 +1,4 @@
-package dev.gkcoding.receiptscanner.ui
+package dev.gkcoding.splitsnap.ui
 
 import android.Manifest
 import android.content.pm.PackageManager

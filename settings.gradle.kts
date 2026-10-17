@@ -14,5 +14,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ReceiptScannerCompose"
+rootProject.name = "SplitSnap"
 include(":app")

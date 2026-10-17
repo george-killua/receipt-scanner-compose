@@ -1,46 +1,31 @@
-# Receipt Scanner Compose
+# SplitSnap
 
-Native Android receipt scanning demo built with Kotlin, Jetpack Compose, CameraX, ML Kit OCR, and Room.
+Snap the bill, tap who had what, and everyone pays their share. SplitSnap is a native Android bill splitter built with Kotlin, Jetpack Compose, CameraX, on-device ML Kit OCR, and Room.
 
 GitHub: https://github.com/george-killua/receipt-scanner-compose
 
-## Screenshots
+## How it works
 
-Real screenshots captured from the debug APK running on an Android emulator.
-
-| Saved receipts | Receipt detail |
-| --- | --- |
-| ![Saved receipts](docs/screenshots/real-03-saved-receipts.png) | ![Receipt detail](docs/screenshots/real-04-receipt-detail.png) |
-
-| Home state | Camera capture |
-| --- | --- |
-| ![Home state](docs/screenshots/real-01-home.png) | ![Camera capture](docs/screenshots/real-02-camera.png) |
-
-## What It Demonstrates
-
-- CameraX receipt capture flow
-- PDF and image import through Android document picker
-- ML Kit OCR text recognition for captured/imported receipts
-- Extraction of merchant, date, and total amount from OCR text
-- Review/edit screen before saving extracted data
-- Local original-file storage in app private storage
-- Room database persistence for saved receipts
-- Compose list/detail UI for saved receipt records
+1. **Scan, import, or type a bill.** Take a photo of a receipt or import an image or PDF. SplitSnap reads the line items, tax, tip, and total on the phone; nothing is uploaded.
+2. **Add the people at the table.** Names you've used before appear as one-tap suggestions.
+3. **Pick a person, then tap what they had.** Tap a dish for several people to share it. "Share the rest with everyone" handles the drinks and the bread.
+4. **See the split.** Shares are exact to the cent: shared items are divided evenly, and tax and tip follow each person's subtotal. A check compares the bill with the receipt total, so you notice a misread line.
+5. **Send everyone their share** through any messaging app, then tick people off as they pay you back.
 
 ## Architecture
 
-- `ui`: Compose screens, camera preview, and ViewModel state
-- `domain`: OCR processing, PDF first-page rendering, file storage, and parser logic
-- `data`: Room entity, DAO, database, and repository
+- `domain`: pure Kotlin. `ReceiptRows` rebuilds receipt rows from OCR bounding boxes, `ReceiptParser` pulls out line items, tax, tip, and total, `SplitCalculator` does the cent-exact split, and `Money` handles parsing and formatting.
+- `data`: Room tables for bills, people, items, and item assignments, plus `BillRepository`
+- `ui`: Compose screens (home, camera, bill editor, summary) driven by a single `SplitViewModel`
 
 ## Run
 
 ```bash
-./gradlew clean :app:assembleDebug
+./gradlew :app:testDebugUnitTest :app:assembleDebug
 ```
 
-Open the project in Android Studio and run the `app` configuration on a device or emulator.
+Or open the project in Android Studio and run the `app` configuration.
 
-## Production Notes
+## Notes
 
-This is a focused technical demo, not a finished accounting product. Production receipt scanning should add multi-page PDF handling, parser tuning with real sample receipts, confidence scoring, localization, and stronger edge-case validation.
+The receipt parser uses rules and is tuned for common English and German receipt layouts. It handles VAT that is already included in prices, quantity prefixes such as `2 x`, and discount lines. Unusual layouts may need manual edits in the bill editor.

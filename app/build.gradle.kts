@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "dev.gkcoding.receiptscanner"
+    namespace = "dev.gkcoding.splitsnap"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "dev.gkcoding.receiptscanner"
+        applicationId = "dev.gkcoding.splitsnap"
         minSdk = 26
         targetSdk = 36
         versionCode = 1
@@ -56,6 +56,8 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.10.2")
 
     ksp("androidx.room:room-compiler:$roomVersion")
+
+    testImplementation("junit:junit:4.13.2")
 
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
